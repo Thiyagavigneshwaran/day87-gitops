@@ -1,6 +1,6 @@
+
 apiVersion: apps/v1
 kind: Deployment
-
 metadata:
   name: gitops-demo
   labels:
@@ -8,13 +8,13 @@ metadata:
 spec:
   replicas: 2
   selector:
-    matchlabels:
+    matchLabels:
       app: gitops-demo
   template:
     metadata:
       labels:
         app: gitops-demo
-    spec: 
+    spec:
       containers:
         - name: nginx
           image: nginx:1.28
